@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Hitanshu Jhorar</title>
+  <link rel="stylesheet" href="css/style-contact.css" />
+
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">Hitanshu</div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <section class="contact-section animate">`
+    <h2>Let's Connect</h2>
+    <p>Feel free to drop a message. I'll try to respond as soon as possible.</p>
+    <form action="https://formspree.io/f/meozkybv" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+
+      <!-- Redirect after success -->
+      <input type="hidden" name="_redirect" value="thankyou.html" />
+
+      <button type="submit">Send Message</button>
+    </form>
+
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Hitanshu Jhorar. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Scroll Animation Logic
+    const animatedElements = document.querySelectorAll('.animate, .animate-left, .animate-zoom');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          // Optional: Unobserve after reveal for better performance
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    animatedElements.forEach(el => observer.observe(el));
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Hitanshu Jhorar</title>
+  <link rel="stylesheet" href="css/style-home.css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">Hitanshu</div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+  <main>
+    <section class="hero animate">
+      <h3>Hello there,</h3>
+      <h1>I am Hitanshu Jhorar</h1>
+      <img class="profile-photo" src="assets/icons/my phoo.jpeg" alt="Hitanshu Jhorar">
+      <p>I do web development as a side hustle along with my college. My goal is to deliver best websites according to
+        the
+        taste of my clients.</p>
+      <a href="projects.html" class="btn">View Projects</a>
+    </section>
+
+    <section class="skills animate-zoom" id="skills">
+      <h2 class="section-title">My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+          <p>HTML</p>
+          <span class="percent-text">95%</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 95%;"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+          <p>CSS</p>
+          <span class="percent-text">85%</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 85%;"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            alt="JavaScript" />
+          <p>JavaScript</p>
+          <span class="percent-text">70%</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 70%;"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+          <p>React</p>
+          <span class="percent-text">40%</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 40%;"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" />
+          <p>C</p>
+          <span class="percent-text">80%</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 80%;"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />
+          <p>C++</p>
+          <span class="percent-text">60%</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 60%;"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+          <p>Python</p>
+          <span class="percent-text">65%</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 65%;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    </section>
+
+
+    <section class="about animate-left">
+      <h2>About Me</h2>
+      <p>I’m a passionate coder and an IT student who’s diving into AI/ML and Web Development. I love solving problems
+        and building cool digital products. Currently I’m learning JavaScript and strengthening my logic in C.</p>
+    </section>
+
+    <section class="projects-preview">
+      <h2>Projects Preview</h2>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A personal website to showcase my journey and skills.</p>
+        <a href="projects.html" class="btn-small">View More</a>
+      </div>
+      <div class="project-card">
+        <h3>Landing Page</h3>
+        <p>Responsive landing page using HTML, CSS, and JavaScript.</p>
+        <a href="projects.html" class="btn-small">View More</a>
+      </div>
+    </section>
+
+    <section class="contact-cta animate">
+      <h2>Want to Work Together?</h2>
+      <a href="contact.html" class="btn">Contact Me</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Hitanshu Jhorar. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Scroll Animation Logic
+    const animatedElements = document.querySelectorAll('.animate, .animate-left, .animate-zoom');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          // Optional: Unobserve after reveal for better performance
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    animatedElements.forEach(el => observer.observe(el));
+    //  hamburger menu
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+
+</html>
