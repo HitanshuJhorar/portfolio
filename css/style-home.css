@@ -2,7 +2,7 @@
 :root {
   --primary-bg: #0d0d1a; /* Dark background */
   --section-bg: #111122; /* Slightly lighter for section contrast */
-  --highlight: #8a2be2; /* Purple highlight */
+  --highlight:#0adaa2; /* Purple highlight */
   --accent-blue: #4f84f7; /* Blue tone */
   --text-light: #f0f0f5;
   --text-dark: #ffffff;
