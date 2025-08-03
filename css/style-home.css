@@ -2,8 +2,8 @@
 :root {
   --primary-bg: #0d0d1a; /* Dark background */
   --section-bg: #111122; /* Slightly lighter for section contrast */
-  --highlight:#0adaa2; /* Purple highlight */
-  --accent-blue: #4f84f7; /* Blue tone */
+  --highlight:#fe7b29; /* orange highlight */
+  --accent-blue: #98ae0a; /* Blue tone */
   --text-light: #f0f0f5;
   --text-dark: #ffffff;
   --card-bg: rgba(255, 255, 255, 0.04);
@@ -241,7 +241,7 @@ body {
 }
 .progress {
   height: 100%;
-  background-color: rgb(66, 228, 218); /* White color bar */
+  background-color: rgb(214, 206, 81); /* White color bar */
   border-radius: 4px;
   transition: width 0.5s ease-in-out;
 }
