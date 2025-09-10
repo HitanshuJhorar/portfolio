@@ -2,8 +2,8 @@
 :root {
   --primary-bg: #0d0d1a; /* Dark background */
   --section-bg: #111122; /* Slightly lighter for section contrast */
-  --highlight:#fe7b29; /* orange highlight */
-  --accent-blue: #98ae0a; /* Blue tone */
+   --highlight: #d029fe; /* orange highlight */
+  --accent-blue: #2ea9de; /* Blue tone */
   --text-light: #f0f0f5;
   --text-dark: #ffffff;
   --card-bg: rgba(255, 255, 255, 0.04);

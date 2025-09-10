@@ -1,11 +1,11 @@
 :root {
   --primary-bg: #0d0d1a;
   --section-bg: #111122;
-  --highlight: #fe7b29;
+   --highlight: #d029fe;
   --accent-blue: #60b7dd;
   --text-light: #f0f0f5;
   --text-dark: #ffffff;
-  --hover-card: #f55600;
+  --hover-card: #4f0966;
   --card-bg: rgba(255, 255, 255, 0.04);
   --border-light: rgba(255, 255, 255, 0.1);
   --radius: 20px;
